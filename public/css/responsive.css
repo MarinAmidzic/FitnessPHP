@@ -1,0 +1,116 @@
+@media only screen and (max-width:1440px)
+{
+
+} 
+
+
+
+
+
+@media only screen and (max-width:1024px)
+{
+        .schform{
+            width:100px;
+        }
+
+
+
+
+}
+
+@media only screen and (max-width:768px)
+{
+    #homebg h1{
+        font-size:6.5rem;
+    }
+    #homebg h3{
+        font-size:3.5rem;
+    }
+    #loginbtn{
+        position:absolute;
+        left:140px;
+        top:4px;
+    }
+    
+    .navbar-toggler{
+        position:absolute;
+        top:4px;
+        right:0;
+    }
+    #navbarScroll{
+        background:#6CB4EE;
+        text-align:center;
+        z-index:100;
+        
+    }
+    #searchform{
+        display:flex;
+        justify-content: center;
+    }
+    .navbar-brand{
+        padding:0;
+    }   
+}
+
+@media only screen and (max-width:425px)
+{
+    #logincontainer{
+        width:305px;
+        height:500px;
+    }
+    #logincontainer br{
+        display: none;
+    }
+
+    #logincontainer .form-control{
+        margin-top:10px;
+    }
+    #logincontainer .input-group-text{
+        margin-top:10px;
+    }
+    #lgnhr{
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    #logincontainer .checkbox{
+        padding-bottom:20px;
+        padding-top:20px;
+    }
+
+
+    #homebg h1{
+        font-size:3.8rem;
+    }
+    #homebg h3{
+        font-size:2.3rem;
+    }
+    #premiumbtn{
+        width:150px;
+        font-size:14px;
+        padding:4px;
+    }
+    #homebg{
+        height:750px;
+    }
+    footer p{
+        font-size:14px;
+        padding-bottom:8px;
+    }
+    footer a{
+        font-size:14px;
+    }
+    #newsletterdiv{
+        display:none;
+    }
+}
+
+
+@media only screen and (max-width:320px)
+{
+    #homebg h1{
+        font-size:3.4rem
+    }
+    #homebg h3{
+        font-size:2.1rem;
+    }
+}
