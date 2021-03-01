@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar" id="navbar">
         <div class="container-fluid">
           <a class="navbar-brand float-left" href="#"><img src="/public/img/navbarlogo.png" id="xy" alt="logo"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse " id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 125px;">
               <li class="nav-item">
                 <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>"><?=App::config('nazivApp')?></a>
               </li>
@@ -34,7 +34,7 @@
                
             </ul>
             <form id="searchform" class="d-flex">
-              <input class="form-control me-2" type="search" id="xy" placeholder="Search" aria-label="Search">
+              <input class="form-control me-2 schform" type="search" id="xy" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" id="searchbtn" type="submit">Search</button>
             </form>
               
@@ -48,7 +48,7 @@
               
                 </div>
 
-              <li class="nav-item">
+              <li class="nav-item" id="loginbtn">
               <?php if(!isset($_SESSION['autoriziran'])): ?>
                 <a class="nav-link active" id="autorizacija" aria-current="page" href="<?=App::config('url')?>index/login">Login</a>
                 <?php else: ?>
