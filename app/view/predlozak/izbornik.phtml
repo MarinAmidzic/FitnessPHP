@@ -29,7 +29,7 @@
                 <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>index/klijenti">Clients</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>index/kontakt">Contact us</a>
+                <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>index/kontakt">Contact</a>
               </li>              
                
             </ul>
@@ -43,7 +43,7 @@
               <div id="dashboarddiv">
                 
               <?php if(isset($_SESSION['autoriziran'])): ?>
-        <li class="nav-item"><a class="nav-link active" href="<?=App::config('url')?>nadzornaploca/index"><?=$_SESSION['autoriziran']->Ime?> <?=$_SESSION['autoriziran']->Prezime?></a></li>
+        <li id="imeli" class="nav-item"><a class="nav-link active" href="<?=App::config('url')?>nadzornaploca/index"><?=$_SESSION['autoriziran']->Ime?> <?=$_SESSION['autoriziran']->Prezime?></a></li>
         <?php endif;?>
               
                 </div>

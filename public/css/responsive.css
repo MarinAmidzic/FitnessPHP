@@ -10,7 +10,14 @@
 @media only screen and (max-width:1024px)
 {
         .schform{
-            width:100px;
+            width:80px;
+            margin-left:0;
+        }
+        #searchform{
+            margin-left:-75px;
+        }
+        #imeli{
+            margin-left:-15px;
         }
 
 
