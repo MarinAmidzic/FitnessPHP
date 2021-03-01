@@ -170,6 +170,34 @@ html{
     font-size:5rem;
 }
 
+#newsinput{
+    height:38px;
+}
+#newsform{
+    display:flex;
+    margin-left:15px;
+}
+#newsbtn{
+    height:38px;
+    margin-left:15px;
+}
+#newsletterdiv h4{
+    margin:0;
+}
+
+
+#newsletterdiv{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+    height:48px;
+    background:#6CB4EE;
+    position:absolute;
+    bottom:0;
+}
+
+
 /* ------------- HOME PAGE KRAJ ----------------*/
 
 
