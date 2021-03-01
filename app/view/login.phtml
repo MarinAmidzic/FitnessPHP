@@ -1,0 +1,55 @@
+<!-- LOGIN CONTAINER START -->
+<div class="col-12" id="login12">
+<div class="container" id="logincontainer">
+    <div class="row" id="row1">
+       <h1><i class="fa fa-lock" aria-hidden="true"></i> Login</h1>
+         
+          </div><br /><br />
+           
+          <form id="loginform" action="<?=App::config('url')?>index/autorizacija"
+    method="POST">
+                    <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="far fa-user"></i></span>
+                  </div>
+                  
+                  <input type="email" name="email" value="<?=$email?>" class="form-control" placeholder="username or email" />
+                </div><br />
+           
+                    <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-key icon"></i></span>
+                  </div>
+                    <input type="Password"  name="lozinka" class="form-control" placeholder="password" />
+                </div><br />
+
+              <div class="checkbox">
+                <label><input type="checkbox" value=""/> Remember me</label>
+              </div><br />
+              <div id="btndiv">
+                
+                <button id="lgnbtn" value="Prijava" type="submit" class="btn btn-primary text-right"><span class="glyphicon glyphicon-off"></span> Login</button>
+                
+              </form>          
+
+
+
+          <button id="fbbtn" type="submit" class="btn btn-info"><span class="glyphicon glyphicon-remove"></span>Login with Facebook </button><br />
+                      </div>
+                 <br /> <center><div id="lgnhr" style="border:1px solid black;height:1px;width:300px;"></div></center><br />
+          <div class="footer" id="loginfooter">
+                    <p>Don't have an Account? <a href="register.html">Sign Up Here</a></p>
+            <p>Forgot <a href="#">Password?</a></p>
+            
+              <div id="porukadiv">
+              <p id="porukap">
+            <?=$poruka?> 
+            </p>
+              </div>
+            
+          </div>
+   
+    </div>
+    </div>
+    
+            <!-- LOGIN CONTAINER END -->
