@@ -1,0 +1,250 @@
+/* --------- NAVBAR POCETAK ---------*/
+body{
+    font-family:gunplay regular;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#navbar{
+    background:#6CB4EE;
+    height:48px;
+    display:flex;
+    width:100%;
+    padding:0;
+}
+#xy{
+    margin-left:15px;
+}
+
+#drop a{
+    color:white;
+}
+
+.nav-link:hover{
+    box-shadow: 0 2px aliceblue;
+}
+
+
+#searchbtn:hover{
+    background:white;
+    border:1px solid white;
+    color:#87CEFA;
+}
+.dropdown-menu.show ul{
+    margin:0;
+}
+
+.container-fluid{
+    padding:0;
+}
+
+#searchbtn{
+    color:white;
+    border:1px solid white;
+}
+#autorizacija{
+    position:absolute;
+    right:15px;
+    top:4px;
+}
+
+.dropdown-menu.show {
+    background:#6CB4EE;
+}
+.dropdown-item:hover{
+    background:#6CB4EE;
+}
+
+
+/* --------- NAVBAR KRAJ ---------*/
+
+
+
+
+
+
+
+
+/* -------------- LOGIN PAGE POCETAK --------------*/
+
+#logincontainer{
+    width:500px;
+    background:aliceblue;
+    height:550px;
+}
+#row1{
+    background:#6CB4EE;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height:90px;
+}
+.input-group-text{
+    height:38px;
+}
+#loginform{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    
+}
+#loginfooter{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#login12{
+    height:937px;
+    background-image: url(/public/img/homebg.jpg);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logout1 a{
+    text-decoration: none;
+    color:white;
+}
+#logout1{
+    position:absolute;
+    right:15px;
+}
+#dashboarddiv a{
+    text-decoration: none;
+    color:white;
+    margin-left:15px;
+}
+#dashboarddiv a:hover{
+    box-shadow: 0 2px aliceblue;
+}
+#fbbtn{
+    background:#4267B2;
+    border:1px solid #4267B2;
+    color:white;
+}
+#lgnbtn{
+    background:#6CB4EE;
+    border:1px solid #6CB4EE;
+}
+
+#porukap{
+    padding:8px;
+    margin:0;
+    font-weight: bold;
+    box-shadow: 0 2px #6CB4EE;
+
+}
+
+
+/* -------------- LOGIN PAGE KRAJ --------------*/
+
+
+
+
+
+
+
+
+/* ------------- HOME PAGE POCETAK ----------------*/
+
+#homebg{
+    width: 100%;
+    height:937px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/public/img/homebg.jpg);
+    position:relative;
+}
+#homebg h1{
+    font-size:9rem;
+    color:white;
+}
+#homebg h3{
+    color:white;
+    font-size:5rem;
+}
+
+/* ------------- HOME PAGE KRAJ ----------------*/
+
+
+
+
+
+
+/* ------------- FOOTER POCETAK ----------------*/
+
+#contact{
+    padding-top:26px;
+}
+
+
+#contactc{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+footer {
+    background: #343a40;
+    padding: 40px;
+}
+footer a {
+    color: #f8f9fa;
+}
+
+#footercontact a{
+    text-decoration: none;
+}
+#cus{
+    background:#212529;
+}
+label{
+    padding:8px;
+}
+small{
+    padding:8px;
+}
+#contactbtn{
+    margin-top:15px;
+    background:#212529;
+    border:1px solid #212529;
+}
+#contactdiv{
+    text-align:center;
+}
+#footercontact input{
+    margin-bottom:8px;
+}
+#infodiv p{
+    margin:0;
+}
+#mapsdiv{
+    margin-top:10px;
+    text-align: center;
+    border:1px solid #212529;
+}
+/* ------------- FOOTER KRAJ ----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------- NADZORNA PLOCA POCETAK -------------*/
+
+
+
+
+
+/* ----------------- NADZORNA PLOCA POCETAK -------------*/
