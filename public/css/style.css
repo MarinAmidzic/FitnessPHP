@@ -256,6 +256,11 @@ small{
     text-align: center;
     border:1px solid #212529;
 }
+
+#footera a:hover{
+    color:#6CB4EE;
+}
+
 /* ------------- FOOTER KRAJ ----------------*/
 
 
