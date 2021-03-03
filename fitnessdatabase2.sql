@@ -14,7 +14,7 @@ create table Klijent(
     visina int(3) ,
     masa int(3) ,
     kontakt varchar(24),
-    brojTjednihTreninga int(1) ,
+    adresa varchar(50) ,
     prehrana int , 
     uloga varchar(15),
     trener int
@@ -86,8 +86,10 @@ values (null,'Richard','Piana','M','25godina','150','TrenerSnage','richpiana@gma
 
 
 
-insert into Klijent(sifra,ime,prezime,email,lozinka,spol,dob,visina,masa,brojTjednihTreninga,trener,uloga)
-values(null,'Tin','Jeger','jegertin@gmail.com','$2y$12$lR.g1de/nAAjOMwL2vrzNeF0lFpsjN5aFPd9nHchNr6WtA0vjyQxK','M','22','180','75','5',4,'Klijent'),(null,'Valentin','Mikić','tinomikic@gmail.com','$2y$12$Q5cYxv.pKEeP0zjGFzLfJOq/Q0LzD4qjV3QQOJxLoXepx4ANNNk/G','M','24','183','90','5',1,'Klijent'),(null,'Marin','Amidžić','marinamidzic@gmail.com','$2y$12$mRxSI5MX.nMdQMSkPlmcoe64E1JM7Mvdss6EVz5u9e.zEuuP/I9n6','M','24','179','83','7',5,'Admin');
+insert into Klijent(sifra,ime,prezime,email,lozinka,spol,dob,visina,masa,adresa,trener,uloga)
+values(null,'Tin','Jeger','jegertin@gmail.com','$2y$12$lR.g1de/nAAjOMwL2vrzNeF0lFpsjN5aFPd9nHchNr6WtA0vjyQxK','M','22','180','75','nebitnotrenutno',4,'Klijent'),
+(null,'Valentin','Mikić','tinomikic@gmail.com','$2y$12$Q5cYxv.pKEeP0zjGFzLfJOq/Q0LzD4qjV3QQOJxLoXepx4ANNNk/G','M','24','183','90','nebitnotrenutno',1,'Klijent'),
+(null,'Marin','Amidžić','marinamidzic@gmail.com','$2y$12$mRxSI5MX.nMdQMSkPlmcoe64E1JM7Mvdss6EVz5u9e.zEuuP/I9n6','M','24','179','83','Vukovarska 76 , 31000 Osijek',5,'Admin');
 
 
 insert into Trening(sifra,naziv,trajanje,odmor,brojPonavljanja,tjednihTreninga,trener,klijent)
@@ -101,6 +103,5 @@ values (null,'TreningPrsa','1.5h','1min','12-14','1',4,1);
 
 
 update Klijent set kontakt = '0911828535' where sifra=3 ;
-
 select * from klijent;
 
