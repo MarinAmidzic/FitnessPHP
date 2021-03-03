@@ -341,4 +341,16 @@ small{
     margin-right:4px;
 }
 
+.card6{
+    background:aliceblue;
+}
+
+.nadzornali{
+    list-style: none;
+}
+.nadzornaul{
+    padding:0;
+    margin:0;
+}
+
 /* ----------------- NADZORNA PLOCA POCETAK -------------*/

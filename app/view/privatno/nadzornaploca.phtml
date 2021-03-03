@@ -98,8 +98,8 @@
                 </div>
               </div>
               <div class="row gutters-sm">
-                <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
+                <div class="col-sm-6 mb-3 ">
+                  <div class="card h-100 card6">
                     <div class="card-body">
                       <h6 class="d-flex align-items-center mb-3"><i class="material-icons text-info mr-2 assignment">assignment </i> Improvement </h6>
                       <small>Chest</small>
@@ -125,10 +125,34 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-sm-6 mb-3">
-                  <div class="card h-100">
+                <div class="col-sm-6 mb-3 ">
+                  <div class="card h-100 card6">
                     <div class="card-body">
-                      
+                      <ul class="nadzornaul">
+                          <li class="nadzornali">
+                              Age : <?=$_SESSION['autoriziran']->dob?>
+                          </li>
+                          <hr>
+                          <li class="nadzornali">
+                              Sex : <?=$_SESSION['autoriziran']->spol?>
+                          </li>
+                          <hr>
+                          <li class="nadzornali">
+                              Weight : <?=$_SESSION['autoriziran']->masa?> kg
+                          </li>
+                          <hr>
+                          <li class="nadzornali">
+                              Goal Weight : <?=$_SESSION['autoriziran']->cilj?> kg
+                          </li>
+                          <hr>
+                          <li class="nadzornali">
+                              Height : <?=$_SESSION['autoriziran']->visina?> cm
+                          </li>
+                          <hr>
+                          <li class="nadzornali">
+                              Trainer : <?=$_SESSION['autoriziran']->trener?>
+                          </li>
+                      </ul>
 
 
                     </div>
