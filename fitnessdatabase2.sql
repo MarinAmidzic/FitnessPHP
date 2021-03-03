@@ -99,5 +99,8 @@ values (null,'TreningPrsa','1.5h','1min','12-14','1',4,1);
 
 
 
+
+update Klijent set kontakt = '0911828535' where sifra=3 ;
+
 select * from klijent;
 
