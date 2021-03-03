@@ -7,13 +7,13 @@
           <div class="collapse navbar-collapse " id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 125px;">
               <li class="nav-item">
-                <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>"><?=App::config('nazivApp')?></a>
+                <a class="nav-link active xy"  aria-current="page" href="<?=App::config('url')?>"><?=App::config('nazivApp')?></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>index/premium">Premium</a>
+                <a class="nav-link active xy "  aria-current="page" href="<?=App::config('url')?>index/premium">Premium</a>
               </li>
-              <li class="nav-item dropdown" id="drop">
-                <a class="nav-link dropdown-toggle" id="xy" href="<?=App::config('url')?>index/treneri" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item dropdown xy" id="drop">
+                <a class="nav-link dropdown-toggle"  href="<?=App::config('url')?>index/treneri" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Trainers
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -23,30 +23,30 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>index/trening">Workouts</a>
+                <a class="nav-link active xy"  aria-current="page" href="<?=App::config('url')?>index/trening">Workouts</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>index/klijenti">Clients</a>
+                <a class="nav-link active xy"  aria-current="page" href="<?=App::config('url')?>index/klijenti">Clients</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="xy" aria-current="page" href="<?=App::config('url')?>index/kontakt">Contact</a>
+                <a class="nav-link active xy" aria-current="page" href="<?=App::config('url')?>index/kontakt">Contact</a>
               </li>              
                
             </ul>
             <form id="searchform" class="d-flex">
-              <input class="form-control me-2 schform" type="search" id="xy" placeholder="Search" aria-label="Search">
+              <input class="form-control me-2 schform xy" type="search"  placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" id="searchbtn" type="submit">Search</button>
             </form>
               
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-              <div id="dashboarddiv">
+              
                 
               <?php if(isset($_SESSION['autoriziran'])): ?>
         <li id="imeli" class="nav-item"><a class="nav-link active" href="<?=App::config('url')?>nadzornaploca/index"><?=$_SESSION['autoriziran']->ime?> <?=$_SESSION['autoriziran']->prezime?> | <?=$_SESSION['autoriziran']->uloga?></a></li>
         <?php endif;?>
               
-                </div>
+                
 
               <li class="nav-item" id="loginbtn">
               <?php if(!isset($_SESSION['autoriziran'])): ?>

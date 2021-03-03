@@ -13,7 +13,7 @@ html{
     width:100%;
     padding:0;
 }
-#xy{
+.xy{
     margin-left:15px;
 }
 
@@ -113,6 +113,7 @@ html{
     position:absolute;
     right:15px;
 }
+/*
 #dashboarddiv a{
     text-decoration: none;
     color:white;
@@ -120,6 +121,11 @@ html{
 }
 #dashboarddiv a:hover{
     box-shadow: 0 2px aliceblue;
+}
+*/
+
+#imeli{
+    margin-left:15px;
 }
 #fbbtn{
     background:#4267B2;
@@ -257,7 +263,7 @@ small{
     border:1px solid #212529;
 }
 
-#footera a:hover{
+.footera a:hover{
     color:#6CB4EE;
 }
 
