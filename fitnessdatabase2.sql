@@ -62,7 +62,14 @@ create table Prehrana(
     TjedniTroskovi decimal(10,2)
    );
   
-  
+create table Operater(
+    sifra int not null primary key auto_increment,
+    Email varchar(50) not null,
+    lozinka char(60) not null,
+    Ime varchar(50) not null,
+    Prezime varchar(50) not null,
+    Uloga varchar(10) not null
+);
 
 
 
