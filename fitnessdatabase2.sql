@@ -16,6 +16,7 @@ create table Klijent(
     kontakt varchar(24),
     brojTjednihTreninga int(1) ,
     prehrana int , 
+    uloga varchar(15),
     trener int
  
 );
@@ -62,16 +63,6 @@ create table Prehrana(
     tjedniTroskovi decimal(10,2)
    );
   
-create table Operater(
-    sifra int not null primary key auto_increment,
-    email varchar(50) not null,
-    lozinka char(60) not null,
-    ime varchar(50) not null,
-    prezime varchar(50) not null,
-    uloga varchar(10) not null
-);
-
-
 
 
 
@@ -95,8 +86,8 @@ values (null,'Richard','Piana','M','25godina','150','TrenerSnage','richpiana@gma
 
 
 
-insert into Klijent(sifra,ime,prezime,email,lozinka,spol,dob,visina,masa,brojTjednihTreninga,trener)
-values(null,'Tin','Jeger','jegertin@gmail.com','$2y$12$lR.g1de/nAAjOMwL2vrzNeF0lFpsjN5aFPd9nHchNr6WtA0vjyQxK','M','22','180','75','5',4),(null,'Valentin','Mikić','tinomikic@gmail.com','$2y$12$Q5cYxv.pKEeP0zjGFzLfJOq/Q0LzD4qjV3QQOJxLoXepx4ANNNk/G','M','24','183','90','5',1),(null,'Marin','Amidžić','marinamidzic@gmail.com','$2y$12$mRxSI5MX.nMdQMSkPlmcoe64E1JM7Mvdss6EVz5u9e.zEuuP/I9n6','M','24','179','83','7',5);
+insert into Klijent(sifra,ime,prezime,email,lozinka,spol,dob,visina,masa,brojTjednihTreninga,trener,uloga)
+values(null,'Tin','Jeger','jegertin@gmail.com','$2y$12$lR.g1de/nAAjOMwL2vrzNeF0lFpsjN5aFPd9nHchNr6WtA0vjyQxK','M','22','180','75','5',4,'Klijent'),(null,'Valentin','Mikić','tinomikic@gmail.com','$2y$12$Q5cYxv.pKEeP0zjGFzLfJOq/Q0LzD4qjV3QQOJxLoXepx4ANNNk/G','M','24','183','90','5',1,'Klijent'),(null,'Marin','Amidžić','marinamidzic@gmail.com','$2y$12$mRxSI5MX.nMdQMSkPlmcoe64E1JM7Mvdss6EVz5u9e.zEuuP/I9n6','M','24','179','83','7',5,'Admin');
 
 
 insert into Trening(sifra,naziv,trajanje,odmor,brojPonavljanja,tjednihTreninga,trener,klijent)
@@ -106,11 +97,7 @@ values(null,'TreningPrsa','2h','4min','4-8','2',1,3),(null,'TreningLeda','2h','4
 insert into Trening(sifra,naziv,trajanje,odmor,brojPonavljanja,tjednihTreninga,trener,klijent)
 values (null,'TreningPrsa','1.5h','1min','12-14','1',4,1);
 
-insert into Operater(sifra,email,lozinka,ime,prezime,uloga)
-values (null,'jegertin@gmail.com','$2y$12$lR.g1de/nAAjOMwL2vrzNeF0lFpsjN5aFPd9nHchNr6WtA0vjyQxK','Tin','Jeger','Klijent'),
-(null,'marinamidzic@gmail.com','$2y$12$mRxSI5MX.nMdQMSkPlmcoe64E1JM7Mvdss6EVz5u9e.zEuuP/I9n6','Marin','Amidžić','Admin'),
-(null,'pero@gmail.com','$2y$12$0GS.CwCpyfISExfDxmG5Les5CWYSjteVFEnd2aNJjyrcqYS293rby','Pero','Perica','Operater');
 
-select * from operater;
 
+select * from klijent;
 
