@@ -53,7 +53,7 @@ class IndexController extends Controller
         $veza = DB::getInstanca();
         $izraz=$veza->prepare('
         
-            select * from Klijent where email=:email
+            select * from Operater where email=:email
         
         ');
         $izraz->execute(['email'=>$_POST['email']]);

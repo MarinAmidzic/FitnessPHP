@@ -43,7 +43,7 @@
               <div id="dashboarddiv">
                 
               <?php if(isset($_SESSION['autoriziran'])): ?>
-        <li id="imeli" class="nav-item"><a class="nav-link active" href="<?=App::config('url')?>nadzornaploca/index"><?=$_SESSION['autoriziran']->Ime?> <?=$_SESSION['autoriziran']->Prezime?></a></li>
+        <li id="imeli" class="nav-item"><a class="nav-link active" href="<?=App::config('url')?>nadzornaploca/index"><?=$_SESSION['autoriziran']->ime?> <?=$_SESSION['autoriziran']->prezime?> | <?=$_SESSION['autoriziran']->uloga?></a></li>
         <?php endif;?>
               
                 </div>
