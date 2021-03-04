@@ -1,6 +1,6 @@
 /* --------- NAVBAR POCETAK ---------*/
 body{
-    font-family:gunplay regular;
+    font-family:gunplay regular ;
 }
 html{
     scroll-behavior: smooth;
@@ -339,6 +339,10 @@ small{
 
 .assignment{
     margin-right:4px;
+}
+
+svg{
+    margin-right:8px;
 }
 
 .card6{

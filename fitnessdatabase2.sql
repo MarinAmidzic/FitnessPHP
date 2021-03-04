@@ -17,7 +17,7 @@ create table Klijent(
     adresa varchar(50) ,
     prehrana int , 
     uloga varchar(15),
-    cilj varchar(3),
+    cilj varchar(40),
     trener int
  
 );
@@ -102,8 +102,9 @@ values (null,'TreningPrsa','1.5h','1min','12-14','1',4,1);
 
 
 
-
 update Klijent set kontakt = '0911828535' where sifra=3 ;
-update Klijent set cilj = 100 where sifra=3;
+update Klijent set cilj = '100 kg' where sifra=3;
 select * from klijent;
+
+
 
