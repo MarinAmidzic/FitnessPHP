@@ -360,3 +360,31 @@ svg{
 
 
 /* ----------------- NADZORNA PLOCA POCETAK -------------*/
+
+
+
+
+
+/* ----------------- TRENERI POCETAK -------------*/
+
+#trainers{
+    margin-top:15px;
+    margin-bottom:15px;
+    
+}
+
+.card-img-top{
+    padding:15px;
+}
+
+.cbodyt{
+    display:flex;
+    justify-content: space-evenly;
+}
+.col4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ----------------- TRENERI KRAJ-------------*/

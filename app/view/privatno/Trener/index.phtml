@@ -1,26 +1,78 @@
-<h1 style="font-size: 1em;">Treneri</h1>
-<?php if($_SESSION['autoriziran']->uloga=='Admin'): ?>
-<a href="<?=App::config('url')?>trener/novo">Dodaj novog trenera</a>
-<?php endif; ?>
-<ul>
-
-<?php foreach($treneri as $trener): ?>
-    <li>
-        <?=$trener->ime?> ,
-        <?=$trener->prezime?> ,
-        <?=$trener->spol?> ,
-        <?=$trener->iskustvo?> ,
-        <?=$trener->brojKlijenata?> ,
-        <?=$trener->vrsta?> ,
-        <?=$trener->email?> ,
-        
-    </li>
 
 
-<?php endforeach; ?>
-</ul>
+<div class="container col-12" id="trainers">
 
+<div class="row">
+ 
+<div class="col-sm-4 colt">
+    <div class="card card6" style="width: 20rem;">
+            <img src="/public/img/richgym.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Richard Eugene Piana</h5>
+              <p class="card-text">26 years of training experience and 10 years of experience as coach. One of the most known fitness athletes in the world. </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Height: 6'</li>
+              <li class="list-group-item">Weight: 300lb</li>
+              <li class="list-group-item">Date of Birth: Sep 26, 1970</li>
+              <li class="list-group-item">Residence: United States</li>
+              <li class="list-group-item">Affiliation: <a href="https://5percentnutrition.com/" target="_blank">5%Nutrition</a></li>           
+            </ul>
+            <div class="card-body cbodyt">
+              <a href="https://www.facebook.com/OfficialRichPiana/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/1dayumay/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCJHroOyfde4rZLTL2Zmk1UQ" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+          </div>
+          </div>
 
+          <div class="col-sm-4 colt">
+    <div class="card card6" style="width: 20rem;">
+            <img src="/public/img/richgym.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Richard Eugene Piana</h5>
+              <p class="card-text">26 years of training experience and 10 years of experience as coach. One of the most known fitness athletes in the world. </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Height: 6'</li>
+              <li class="list-group-item">Weight: 300lb</li>
+              <li class="list-group-item">Date of Birth: Sep 26, 1970</li>
+              <li class="list-group-item">Residence: United States</li>
+              <li class="list-group-item">Affiliation: <a href="https://5percentnutrition.com/" target="_blank">5%Nutrition</a></li>           
+            </ul>
+            <div class="card-body cbodyt">
+              <a href="https://www.facebook.com/OfficialRichPiana/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/1dayumay/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCJHroOyfde4rZLTL2Zmk1UQ" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+          </div>
+          </div>
 
-
+          <div class="col-sm-4 colt">
+    <div class="card card6" style="width: 20rem;">
+            <img src="/public/img/richgym.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Richard Eugene Piana</h5>
+              <p class="card-text">26 years of training experience and 10 years of experience as coach. One of the most known fitness athletes in the world. </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Height: 6'</li>
+              <li class="list-group-item">Weight: 300lb</li>
+              <li class="list-group-item">Date of Birth: Sep 26, 1970</li>
+              <li class="list-group-item">Residence: United States</li>
+              <li class="list-group-item">Affiliation: <a href="https://5percentnutrition.com/" target="_blank">5%Nutrition</a></li>           
+            </ul>
+            <div class="card-body cbodyt">
+              <a href="https://www.facebook.com/OfficialRichPiana/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/1dayumay/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UCJHroOyfde4rZLTL2Zmk1UQ" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+          </div>
+          </div>
+    </div> 
+ </div>
+  
 
