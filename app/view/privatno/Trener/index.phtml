@@ -1,0 +1,19 @@
+<h1 style="font-size: 1em;">Treneri</h1>
+<a href="<?=App::config('url')?>smjer/novo">Dodaj novog trenera</a>
+<ul>
+<?php foreach($treneri as $trener): ?>
+    <li>
+        <?=$trener->ime?> 
+        <?=$trener->prezime?> 
+        <?=$trener->spol?> 
+        <?=$trener->iskustvo?> 
+        <?=$trener->brojKlijenata?> 
+        <?=$trener->vrsta?> 
+        <?=$trener->email?> 
+        <?=$trener->fitnessCompany?> 
+    </li>
+<?php endforeach; ?>
+
+
+</ul>
+
