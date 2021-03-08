@@ -2,6 +2,8 @@ drop database if exists FitnessDatabase2;
 create database FitnessDatabase2 character set utf8mb4;
 use FitnessDatabase2;
 
+# alter database cesar_pp22 default character set utf8mb4;
+
 
 create table Klijent(
     sifra int not null primary key auto_increment,
