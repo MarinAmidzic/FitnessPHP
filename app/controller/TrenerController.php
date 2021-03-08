@@ -19,21 +19,21 @@ class TrenerController extends AutorizacijaController
     public function novo()
     {
         if($_SERVER['REQUEST_METHOD']==='GET'){
-            $smjer = new stdClass();
-            $smjer->naziv='';
-            $smjer->trajanje=100;
-            $smjer->cijena=1000;
-            $smjer->verificiran='0';
+            $trener = new stdClass();
+            $trener->ime='';
+            $trener->prezime=100;
+            $trener->vrsta=1000;
+            $trener->iskustvo='0';
            // $this->view->render($this->viewDir . 'novo',[
            //     'smjer'=>$smjer,
            //     'poruka'=>'Popunite sve podatke'
            // ]);
-            $this->novoView($smjer,'Popunite sve podatke');
+            $this->novoView($trener,'Popunite sve podatke');
             return;
         }
 
 
-        $smjer = (object) $_POST;
+        $trener = (object) $_POST;
 
         if(strlen(trim($smjer->naziv))===0){
            // $this->view->render($this->viewDir . 'novo',[
@@ -56,25 +56,25 @@ class TrenerController extends AutorizacijaController
             return;
       }
 
-      $smjer->cijena=str_replace(',','.',$smjer->cijena);
-      if(!is_numeric($smjer->cijena)
-            || ((float)$smjer->cijena)<=0){
-            $this->novoView($smjer,'Cijena mora biti pozitivni broj');
+      $smjer->cijena=str_replace(',','.',$trener->cijena);
+      if(!is_numeric($trener->cijena)
+            || ((float)$trener->cijena)<=0){
+            $this->novoView($trener,'Cijena mora biti pozitivni broj');
             return;
       }
 
       // npr. svojstvu verificiran ne treba kontrola
 
       // ovdje sam siguran da je sve OK prije odlaska u bazu
-      Smjer::dodajNovi($smjer);
+      Trener::dodajNovi($trener);
       $this->index();
        
     }
 
-    private function novoView($smjer, $poruka)
+    private function novoView($trener, $poruka)
     {
         $this->view->render($this->viewDir . 'novo',[
-            'smjer'=>$smjer,
+            'trener'=>$trener,
             'poruka'=>$poruka
         ]);
     }
