@@ -16,7 +16,7 @@ if($dev){
     ];
 }
 return [
-    'url'=>'http://polaznik22.edunova.hr/',
+    'url'=>'http://zavrsnirad.hr/',
     'nazivApp'=>'Fitness',
     'baza'=>$baza
 ];
