@@ -8,29 +8,13 @@ class Trener
         $veza = DB::getInstanca();
         $izraz=$veza->prepare('
         
-            select * from trener where sifra=1
+            select * from trener 
         
         ');
         $izraz->execute();
         return $izraz->fetchAll();
     }
-
-    public static function ucitajDrugog()
-    {
-        $veza = DB::getInstanca();
-        $izraz=$veza->prepare('
-        
-            select * from trener where sifra=2
-        
-        ');
-        $izraz->execute();
-        return $izraz->fetchAll();
-    }
-
-
-
-
-
+   
 
    /* public static function dodajNovi($trener)
     {
@@ -45,3 +29,4 @@ class Trener
     }
     */
 }
+

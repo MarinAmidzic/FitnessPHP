@@ -1,20 +1,26 @@
 <h1 style="font-size: 1em;">Treneri</h1>
+<?php if($_SESSION['autoriziran']->uloga=='Admin'): ?>
 <a href="<?=App::config('url')?>trener/novo">Dodaj novog trenera</a>
+<?php endif; ?>
 <ul>
+
 <?php foreach($treneri as $trener): ?>
     <li>
-        <?=$trener->ime?> 
-        <?=$trener->prezime?> 
-        <?=$trener->spol?> 
-        <?=$trener->iskustvo?> 
-        <?=$trener->brojKlijenata?> 
-        <?=$trener->vrsta?> 
-        <?=$trener->email?> 
-        <?=$trener->fitnessCompany?> 
+        <?=$trener->ime?> ,
+        <?=$trener->prezime?> ,
+        <?=$trener->spol?> ,
+        <?=$trener->iskustvo?> ,
+        <?=$trener->brojKlijenata?> ,
+        <?=$trener->vrsta?> ,
+        <?=$trener->email?> ,
+        <?=$trener->fitnessCompany?> ,
     </li>
 
 
 <?php endforeach; ?>
-
-
 </ul>
+
+
+
+
+
