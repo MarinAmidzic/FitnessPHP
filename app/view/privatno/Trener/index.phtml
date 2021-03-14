@@ -72,6 +72,15 @@
             
           </div>
           </div>
+
+          <?php if($_SESSION['autoriziran']->uloga=='Admin'): ?>
+            <div id="novitrenerdiv" class="container">
+            <a id="novitrener" href="<?=App::config('url')?>smjer/novo">Add new trainer</a>
+            </div>
+            <?php endif; ?>
+
+
+
     </div> 
  </div>
   
