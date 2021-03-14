@@ -34,7 +34,7 @@ class Trener
         $veza = DB::getInstanca();
         $izraz=$veza->prepare('
         
-            insert into trener (ime,prezime,iskustvo,vrsta)
+            insert into Trener (ime,prezime,iskustvo,vrsta)
             values (:ime,:prezime,:iskustvo,:vrsta)
         
         ');
