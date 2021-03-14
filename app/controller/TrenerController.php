@@ -25,9 +25,9 @@ class TrenerController extends AutorizacijaController
         if($_SERVER['REQUEST_METHOD']==='GET'){
             $trener = new stdClass();
             $trener->ime='';
-            $trener->prezime=100;
-            $trener->vrsta=1000;
-            $trener->iskustvo='0';
+            $trener->prezime='';
+            $trener->vrsta='';
+            $trener->iskustvo='';
            // $this->view->render($this->viewDir . 'novo',[
            //     'smjer'=>$smjer,
            //     'poruka'=>'Popunite sve podatke'
@@ -39,33 +39,47 @@ class TrenerController extends AutorizacijaController
 
         $trener = (object) $_POST;
 
-        if(strlen(trim($smjer->naziv))===0){
+        if(strlen(trim($trener->ime))===0){
            // $this->view->render($this->viewDir . 'novo',[
            //     'smjer'=>$smjer,
           //      'poruka'=>'Naziv obavezno'
            // ]);
            // linija ispod mijenja 4 linije iznad
-            $this->novoView($smjer,'Naziv obavezno');
+            $this->novoView($trener,'Ime obavezno');
             return;
         }
 
-        if(strlen(trim($smjer->naziv))>50){
-            $this->novoView($smjer,'Naziv ne može imati više od 50 znakova');
+        if(strlen(trim($trener->prezime))===0){
+            $this->novoView($trener,'Prezime obavezno');
+        }
+        if(strlen(trim($trener->iskustvo))===0){
+            $this->novoView($trener,'Iskustvo obavezno');
+        }
+        if(strlen(trim($trener->vrsta))===0){
+            $this->novoView($trener,'Vrsta obavezno');
+        }
+
+
+
+        if(strlen(trim($trener->ime))>20){
+            $this->novoView($trener,'Ime ne može imati više od 20 znakova');
             return;
         }
-        
-        if(!is_numeric($smjer->trajanje)
-            || ((int)$smjer->trajanje)<=0){
-            $this->novoView($smjer,'Trajanje mora biti cijeli pozitivni broj');
-            return;
-      }
 
-      $smjer->cijena=str_replace(',','.',$trener->cijena);
-      if(!is_numeric($trener->cijena)
-            || ((float)$trener->cijena)<=0){
-            $this->novoView($trener,'Cijena mora biti pozitivni broj');
+        if(strlen(trim($trener->prezime))>20){
+            $this->novoView($trener,'Prezime ne može imati više od 20 znakova');
             return;
-      }
+        }
+        if(strlen(trim($trener->iskustvo))>20){
+            $this->novoView($trener,'Iskustvo ne može imati više od 20 znakova');
+            return;
+        }
+        if(strlen(trim($trener->vrsta))>20){
+            $this->novoView($trener,'Vrsta ne može imati više od 20 znakova');
+            return;
+        }
+
+
 
       // npr. svojstvu verificiran ne treba kontrola
 

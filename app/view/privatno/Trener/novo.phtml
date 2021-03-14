@@ -1,40 +1,30 @@
+<div class="container col-12" id="novitrenerforma">
 <form class="log-in-form" 
     action="<?=App::config('url')?>trener/novo"
     method="POST">
-  <h4 class="text-center">Dodavanje novog smjera</h4>
-  <label>Naziv
-    <input type="text" name="naziv" value="<?=$smjer->naziv?>">
+  <h4 class="text-center">Dodavanje novog trenera</h4>
+  <label class="trenernovoinfo">Ime<br>
+    <input type="text" name="ime" value="<?=$trener->ime?>">
+  </label>
+  <br>
+  <label class="trenernovoinfo">Prezime <br>
+    <input type="text"  name="prezime" value="<?=$trener->prezime?>">
+  </label>
+  <br>
+  <label class="trenernovoinfo">Iskustvo <br>
+    <input type="text" name="iskustvo" value="<?=$trener->iskustvo?>">
+  </label>
+  <br>
+  
+  
+  <label class="trenernovoinfo">Vrsta <br>
+    <input type="text" name="vrsta" value="<?=$trener->vrsta?>">
   </label>
 
-  <label>Trajanje
-    <input type="number" min="1" max="320" name="trajanje" value="<?=$smjer->trajanje?>">
-  </label>
 
-  <label>Cijena
-    <input type="text" name="cijena" value="<?=$smjer->cijena?>">
-  </label>
-
-  <label>Verificiran
-        <select name="verificiran">
-        <option 
-        <?php 
-        if($smjer->verificiran==='1'){
-            echo ' selected="selected" ';
-        }
-        ?>
-         value="1">DA</option>
-
-
-        <option 
-        <?php 
-        if($smjer->verificiran==='0'){
-            echo ' selected="selected" ';
-        }
-        ?>
-         value="0">NE</option>
-        </select>
-  </label>
+  
  
- <p><input type="submit" class="button expanded" value="Dodaj"></input></p>
+ <p id="dodajb"><input type="submit" class="button expanded dodajbtn" value="Dodaj"></input></p>
 <?=$poruka?>
 </form>
+</div>

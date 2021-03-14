@@ -28,5 +28,17 @@ class Trener
         $izraz->execute((array)$smjer);
     }
     */
+
+    public static function dodajNovi($trener)
+    {
+        $veza = DB::getInstanca();
+        $izraz=$veza->prepare('
+        
+            insert into trener (ime,prezime,iskustvo,vrsta)
+            values (:ime,:prezime,:iskustvo,:vrsta)
+        
+        ');
+        $izraz->execute((array)$trener);
+    }
 }
 
