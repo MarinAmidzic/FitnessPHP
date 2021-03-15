@@ -14,7 +14,7 @@ class TrenerController extends AutorizacijaController
     {
         $this->view->render($this->viewDir . 'index',[
             'treneri'=>Trener::ucitajSve()
-        ]);    
+        ]);      
         
     }
 

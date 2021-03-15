@@ -21,12 +21,14 @@ class Trener
         $veza = DB::getInstanca();
         $izraz=$veza->prepare('
         
-            select * from trener 
+            select * from Trener 
         
         ');
         $izraz->execute();
         return $izraz->fetchAll();
     }
+
+    
    
 
    /* public static function dodajNovi($trener)
