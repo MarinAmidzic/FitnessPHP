@@ -13,8 +13,9 @@ class TrenerController extends AutorizacijaController
     public function index()
     {
         $this->view->render($this->viewDir . 'index',[
-            'treneri'=>Trener::ucitajSve()
-        ]);      
+            'treneri'=>Trener::ucitajSve() 
+        ]);  
+    
         
     }
 

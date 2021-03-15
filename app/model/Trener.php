@@ -28,6 +28,19 @@ class Trener
         return $izraz->fetchAll();
     }
 
+    /*
+    public static function Trener1()
+    {
+        $veza = DB::getInstanca();
+        $izraz=$veza->prepare('
+        
+            select * from Trener where sifra=1
+        
+        ');
+        $izraz->execute();
+        return $izraz->fetchAll();
+    }
+*/
     
    
 
