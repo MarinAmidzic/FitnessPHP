@@ -91,4 +91,7 @@ update Klijent set cilj = '100 kg' where sifra=3;
 
 select * from trener where sifra=1;
 
+select * from trener;
+
+
 

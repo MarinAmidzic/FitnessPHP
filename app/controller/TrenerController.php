@@ -6,6 +6,9 @@ class TrenerController extends AutorizacijaController
                         . DIRECTORY_SEPARATOR
                         . 'trener'
                         . DIRECTORY_SEPARATOR;
+    private $trener=null;
+    private $poruka='';
+
 
     public function index()
     {
@@ -16,85 +19,125 @@ class TrenerController extends AutorizacijaController
     }
 
     
+    public function novo()
+    {
+        if($_SERVER['REQUEST_METHOD']==='GET'){
+            $this->noviTrener();
+            return;
+        }
+        $this->trener = (object) $_POST;
+        if(!$this->kontrolaIme()){return;}
+        if(!$this->kontrolaPrezime()){return;}
+        if(!$this->kontrolaIskustvo()){return;}
+        if(!$this->kontrolaVrsta()){return;}
+        Trener::dodajNovi($this->trener);
+        $this->index();
+    }
+    
+    private function noviTrener()
+    {
+        $this->trener = new stdClass();
+        $this->trener->ime='';
+        $this->trener->prezime='';
+        $this->trener->iskustvo='';
+        $this->trener->vrsta='';
+        $this->poruka='Unesite tražene podatke';
+        $this->novoView();
+    }
+
+
+
+
+    private function novoView()
+    {
+        $this->view->render($this->viewDir . 'novo',[
+            'trener'=>$this->trener,
+            'poruka'=>$this->poruka
+        ]);
+    }
+    
+
+
+    private function kontrolaIme()
+    {
+        if(strlen(trim($this->trener->ime))===0){
+            $this->poruka='Ime obavezno';
+            $this->novoView();
+            return false;
+         }
+ 
+         if(strlen(trim($this->trener->ime))>20){
+            $this->poruka='Ime ne može imati više od 20 znakova';
+            $this->novoView();
+            return false;
+         }
+         return true;
+    }
+
+    private function kontrolaPrezime()
+    {
+        if(strlen(trim($this->trener->prezime))===0){
+            $this->poruka='Prezime obavezno';
+            $this->novoView();
+            return false;
+         }
+ 
+         if(strlen(trim($this->trener->prezime))>20){
+            $this->poruka='Prezime ne može imati više od 20 znakova';
+            $this->novoView();
+            return false;
+         }
+         return true;
+    }
+
+
+
+    private function kontrolaIskustvo()
+    {
+        if(strlen(trim($this->trener->iskustvo))===0){
+            $this->poruka='Iskustvo obavezno';
+            $this->novoView();
+            return false;
+         }
+ 
+         if(strlen(trim($this->trener->iskustvo))>20){
+            $this->poruka='Iskustvo ne može imati više od 20 znakova';
+            $this->novoView();
+            return false;
+         }
+         return true;
+    }
+
+
+
+    private function kontrolaVrsta()
+    {
+        if(strlen(trim($this->trener->vrsta))===0){
+            $this->poruka='Vrsta obavezno';
+            $this->novoView();
+            return false;
+         }
+ 
+         if(strlen(trim($this->trener->vrsta))>20){
+            $this->poruka='Vrsta ne može imati više od 20 znakova';
+            $this->novoView();
+            return false;
+         }
+         return true;
+    }
+
+    
+    
+
+
+
 
     
 
 
-    public function novo()
-    {
-        if($_SERVER['REQUEST_METHOD']==='GET'){
-            $trener = new stdClass();
-            $trener->ime='';
-            $trener->prezime='';
-            $trener->vrsta='';
-            $trener->iskustvo='';
-           // $this->view->render($this->viewDir . 'novo',[
-           //     'smjer'=>$smjer,
-           //     'poruka'=>'Popunite sve podatke'
-           // ]);
-            $this->novoView($trener,'Popunite sve podatke');
-            return;
-        }
-
-
-        $trener = (object) $_POST;
-
-        if(strlen(trim($trener->ime))===0){
-           // $this->view->render($this->viewDir . 'novo',[
-           //     'smjer'=>$smjer,
-          //      'poruka'=>'Naziv obavezno'
-           // ]);
-           // linija ispod mijenja 4 linije iznad
-            $this->novoView($trener,'Ime obavezno');
-            return;
-        }
-
-        if(strlen(trim($trener->prezime))===0){
-            $this->novoView($trener,'Prezime obavezno');
-        }
-        if(strlen(trim($trener->iskustvo))===0){
-            $this->novoView($trener,'Iskustvo obavezno');
-        }
-        if(strlen(trim($trener->vrsta))===0){
-            $this->novoView($trener,'Vrsta obavezno');
-        }
 
 
 
-        if(strlen(trim($trener->ime))>20){
-            $this->novoView($trener,'Ime ne može imati više od 20 znakova');
-            return;
-        }
 
-        if(strlen(trim($trener->prezime))>20){
-            $this->novoView($trener,'Prezime ne može imati više od 20 znakova');
-            return;
-        }
-        if(strlen(trim($trener->iskustvo))>20){
-            $this->novoView($trener,'Iskustvo ne može imati više od 20 znakova');
-            return;
-        }
-        if(strlen(trim($trener->vrsta))>20){
-            $this->novoView($trener,'Vrsta ne može imati više od 20 znakova');
-            return;
-        }
-
-
-
-      // npr. svojstvu verificiran ne treba kontrola
-
-      // ovdje sam siguran da je sve OK prije odlaska u bazu
-      Trener::dodajNovi($trener);
-      $this->index();
-       
-    }
-
-    private function novoView($trener, $poruka)
-    {
-        $this->view->render($this->viewDir . 'novo',[
-            'trener'=>$trener,
-            'poruka'=>$poruka
-        ]);
-    }
 
 }
